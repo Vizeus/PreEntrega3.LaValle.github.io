@@ -1,0 +1,264 @@
+@import "LogIn";
+@import "Explorador";
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos de enlaces al pasar el cursor */
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  #custom-body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #735134;
+  }
+  
+  #grilla {
+    display: grid;
+    grid-template-areas:
+      /* Áreas de la cuadrícula */
+      ". header ." /* Fila vacía para margen superior */
+      "arteYDiseño idiomas marketing" /* Fila 1 */
+      "arteYDiseño idiomas marketing" /* Fila 2 */
+      "programación sonido videojuegos" /* Fila 3 */
+      "programación sonido videojuegos"; /* Fila 4 */
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 3fr 3fr 3fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    height: 60vh;
+    margin: 80px;
+    margin-bottom: 200px;
+  
+    .celda {
+      background-color: #364959;
+      color: white;
+      text-align: center;
+    }
+  
+    #titulo {
+      grid-area: header;
+    }
+  
+    #arteYDiseño {
+      grid-area: arteYDiseño;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #idiomas {
+      grid-area: idiomas;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #marketing {
+      grid-area: marketing;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #programación {
+      grid-area: programación;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #sonido {
+      grid-area: sonido;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #videojuegos {
+      grid-area: videojuegos;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    nav {
+      grid-area: nav;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .bg-custom {
+      background-color: #364959;
+    }
+  
+    @media (min-width: 600px) and (max-width: 1400px) {
+      /* Estilos para pantallas medianas */
+      display: grid;
+      grid-template-areas:
+        ". header header ."
+        "arteYDiseño arteYDiseño idiomas idiomas"
+        "marketing marketing programación programación"
+        "sonido sonido videojuegos videojuegos";
+      grid-template-rows: 1fr 2fr 2fr 2fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+      height: 60vh;
+      margin: 50px;
+      margin-bottom: 200px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 599px) {
+        /* Estilos para pantallas pequeñas */
+        #grilla {
+          display: grid;
+          grid-template-areas:
+            "header"
+            "arteYDiseño"
+            "idiomas"
+            "marketing"
+            "programación"
+            "sonido"
+            "videojuegos";
+          grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+          grid-template-columns: 1fr;
+          row-gap: 20px;
+          column-gap: 20px;
+          height: 60vh;
+          margin: 30px;
+          margin-bottom: 530px;
+          font-size: 11px;
+        }
+    }
+  }
+  
+  footer {
+    /* Estilos del pie de página */
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+  }
+  
+  #contenedorImagen {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  #imagenHome {
+    width: 100%;
+    height: 500px;
+  }
+  
+  #buscador {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  #cuerpo {
+    display: grid;
+    grid-template-areas:
+      /* Áreas de la cuadrícula */
+      ". irAlExplorador ."
+      "textoPrincipal textoPrincipal textoPrincipal"
+      "subcategoriaDestacada categoriaDestacada plataformaDestacada"
+      "textoFinal textoFinal textoFinal";
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 3fr 3fr 3fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    height: 60vh;
+    margin: 80px;
+    margin-bottom: 200px;
+  
+    .celdaIndex {
+      background-color: #D2D5D9;
+      color: white;
+      color: black;
+      text-align: center;
+    }
+  
+    #irAlExplorador {
+      grid-area: irAlExplorador;
+  
+      header {
+        font-weight: bold;
+        font-size: 25px;
+        color: black;
+      }
+    }
+  
+    #textoPrincipal {
+      grid-area: textoPrincipal;
+    }
+  
+    #subcategoriaDestacada {
+      grid-area: subcategoriaDestacada;
+    }
+  
+    #categoriaDestacada {
+      grid-area: categoriaDestacada;
+    }
+  
+    #plataformaDestacada {
+      grid-area: plataformaDestacada;
+    }
+  
+    #textoFinal {
+      grid-area: textoFinal;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    /* Estilos para pantallas pequeñas */
+    #cuerpo {
+      display: grid;
+      grid-template-areas:
+        "irAlExplorador"
+        "textoPrincipal"
+        "subcategoriaDestacada"
+        "categoriaDestacada"
+        "plataformaDestacada"
+        "textoFinal";
+      grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+      height: 60vh;
+      margin: 30px;
+      margin-bottom: 530px;
+      font-size: 11px;
+    }
+  }
+  
+  .imagenDeDestacados {
+    width: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }

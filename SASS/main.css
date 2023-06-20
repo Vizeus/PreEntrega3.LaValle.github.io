@@ -1,0 +1,216 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de enlaces al pasar el cursor */
+a:hover {
+  text-decoration: underline;
+}
+
+#custom-body {
+  font-family: "Kanit", sans-serif;
+  background-color: #735134;
+}
+
+#grilla {
+  display: grid;
+  grid-template-areas: ". header ." "arteYDiseño idiomas marketing" "arteYDiseño idiomas marketing" "programación sonido videojuegos" "programación sonido videojuegos"; /* Fila 4 */
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+  grid-template-columns: 3fr 3fr 3fr;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  height: 60vh;
+  margin: 80px;
+  margin-bottom: 200px;
+}
+#grilla .celda {
+  background-color: #364959;
+  color: white;
+  text-align: center;
+}
+#grilla #titulo {
+  grid-area: header;
+}
+#grilla #arteYDiseño {
+  grid-area: arteYDiseño;
+}
+#grilla #arteYDiseño section {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+#grilla #idiomas {
+  grid-area: idiomas;
+}
+#grilla #idiomas section {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+#grilla #marketing {
+  grid-area: marketing;
+}
+#grilla #marketing section {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+#grilla #programación {
+  grid-area: programación;
+}
+#grilla #programación section {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+#grilla #sonido {
+  grid-area: sonido;
+}
+#grilla #sonido section {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+#grilla #videojuegos {
+  grid-area: videojuegos;
+}
+#grilla #videojuegos section {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+#grilla nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#grilla .bg-custom {
+  background-color: #364959;
+}
+@media (min-width: 600px) and (max-width: 1400px) {
+  #grilla {
+    /* Estilos para pantallas medianas */
+    display: grid;
+    grid-template-areas: ". header header ." "arteYDiseño arteYDiseño idiomas idiomas" "marketing marketing programación programación" "sonido sonido videojuegos videojuegos";
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    height: 60vh;
+    margin: 50px;
+    margin-bottom: 200px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 599px) {
+  #grilla {
+    /* Estilos para pantallas pequeñas */
+  }
+  #grilla #grilla {
+    display: grid;
+    grid-template-areas: "header" "arteYDiseño" "idiomas" "marketing" "programación" "sonido" "videojuegos";
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    height: 60vh;
+    margin: 30px;
+    margin-bottom: 530px;
+    font-size: 11px;
+  }
+}
+
+footer {
+  /* Estilos del pie de página */
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+#contenedorImagen {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#imagenHome {
+  width: 100%;
+  height: 500px;
+}
+
+#buscador {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+#cuerpo {
+  display: grid;
+  grid-template-areas: ". irAlExplorador ." "textoPrincipal textoPrincipal textoPrincipal" "subcategoriaDestacada categoriaDestacada plataformaDestacada" "textoFinal textoFinal textoFinal";
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+  grid-template-columns: 3fr 3fr 3fr;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  height: 60vh;
+  margin: 80px;
+  margin-bottom: 200px;
+}
+#cuerpo .celdaIndex {
+  background-color: #D2D5D9;
+  color: white;
+  color: black;
+  text-align: center;
+}
+#cuerpo #irAlExplorador {
+  grid-area: irAlExplorador;
+}
+#cuerpo #irAlExplorador header {
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+}
+#cuerpo #textoPrincipal {
+  grid-area: textoPrincipal;
+}
+#cuerpo #subcategoriaDestacada {
+  grid-area: subcategoriaDestacada;
+}
+#cuerpo #categoriaDestacada {
+  grid-area: categoriaDestacada;
+}
+#cuerpo #plataformaDestacada {
+  grid-area: plataformaDestacada;
+}
+#cuerpo #textoFinal {
+  grid-area: textoFinal;
+}
+
+@media (max-width: 650px) {
+  /* Estilos para pantallas pequeñas */
+  #cuerpo {
+    display: grid;
+    grid-template-areas: "irAlExplorador" "textoPrincipal" "subcategoriaDestacada" "categoriaDestacada" "plataformaDestacada" "textoFinal";
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    height: 60vh;
+    margin: 30px;
+    margin-bottom: 530px;
+    font-size: 11px;
+  }
+}
+.imagenDeDestacados {
+  width: 150px;
+  margin-top: auto;
+  margin-bottom: auto;
+}/*# sourceMappingURL=main.css.map */

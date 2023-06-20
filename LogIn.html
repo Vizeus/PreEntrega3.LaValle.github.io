@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./SASS/main.css">
+    
+    <!-- Título de la página -->
+    <title>Cursos Online</title>
+    
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!-- Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <!-- Icono -->
+    <link rel="shortcut icon" href="./Imagenes del Proyecto/Icono libro.webp" type="image">
+
+</head>
+
+
+<body id= "custom-body">
+    
+    <!-- Bootstrap Navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+        <div class="container d-flex justify-content-center">
+
+            <div class="row">
+                
+                <div class="col-md-12 col-xs-12 fs-6">
+                    <a class="navbar-brand" href="./index.html">Cursos Online</a>
+                </div>
+        
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+
+                        <!-- Menú desplegable "Cursos" -->
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cursos</a>
+
+                            <ul class="dropdown-menu">
+
+
+                                <li><a class="dropdown-item" href="./newexplorador.html">Explorador de Cursos</a></li>
+                                <li><a class="dropdown-item" href="#">Cursos de Iniciación</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+
+                                <!-- Menú desplegable anidado (no sé por qué no lo pude hacer funcionar) -->
+                                <li class="nav-item dropdown">
+                                    
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
+                                
+                                    <ul class="dropdown-menu">
+
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <!-- Menú desplegable "Perfil" -->
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Perfil</a>
+
+                            <ul class="dropdown-menu">
+
+                                <li><a class="dropdown-item" href="./newlogin.html">Mi Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Mis Favoritos</a></li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+        
+                </div>
+
+            </div>
+
+        </div>
+    
+    </nav>
+
+    
+    <!-- Bootstrap LogIn -->
+
+    <div class="container mt-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-sm-6 bg-info-subtle">
+
+                <h2>Iniciar sesión</h2>
+
+                <form>
+
+                <div class="form-group">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" class="form-control my-3 rounded-0" id="username" placeholder="Ingresa tu nombre de usuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control my-3 rounded-0" id="password" placeholder="Ingresa tu contraseña">
+                </div>
+
+                <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-primary rounded-0">Iniciar sesión</button>
+                </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <!-- Bootstrap Footer -->
+
+    <footer class="text-center text-white fixed-bottom">
+      
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Cursos Online:
+          <a class="text-dark" href="https://mdbootstrap.com/">cursosonline.com</a>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
