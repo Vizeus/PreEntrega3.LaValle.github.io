@@ -1,4 +1,4 @@
-# Repositorio de mi tercera pre-entrega
+# Repositorio de mi segunda pre-entrega
 # La Valle Salvador
 ## Comision 42900
 
