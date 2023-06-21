@@ -1,264 +1,139 @@
 @import "LogIn";
 @import "Explorador";
+@import "Index";
 
-* {
-    margin: 0;
-    padding: 0;
-  }
+* 
+{
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+/* Estilo del body */
+#custom-body 
+{
+  font-family: 'Kanit', sans-serif;
+  background-color: #735134;
+}
   
+/* Estilo de los enlaces */
+a 
+{
+  color: black; 
+  text-decoration: none; 
+
   /* Estilos de enlaces al pasar el cursor */
-  a:hover {
+  a:hover 
+  {
     text-decoration: underline;
   }
-  
-  #custom-body {
-    font-family: 'Kanit', sans-serif;
-    background-color: #735134;
-  }
-  
-  #grilla {
-    display: grid;
-    grid-template-areas:
-      /* Áreas de la cuadrícula */
-      ". header ." /* Fila vacía para margen superior */
-      "arteYDiseño idiomas marketing" /* Fila 1 */
-      "arteYDiseño idiomas marketing" /* Fila 2 */
-      "programación sonido videojuegos" /* Fila 3 */
-      "programación sonido videojuegos"; /* Fila 4 */
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
-    grid-template-columns: 3fr 3fr 3fr;
-    row-gap: 20px;
-    column-gap: 20px;
-    height: 60vh;
-    margin: 80px;
-    margin-bottom: 200px;
-  
-    .celda {
-      background-color: #364959;
-      color: white;
-      text-align: center;
-    }
-  
-    #titulo {
-      grid-area: header;
-    }
-  
-    #arteYDiseño {
-      grid-area: arteYDiseño;
-  
-      section {
-        font-weight: bold;
-        margin-bottom: 25px;
-      }
-    }
-  
-    #idiomas {
-      grid-area: idiomas;
-  
-      section {
-        font-weight: bold;
-        margin-bottom: 25px;
-      }
-    }
-  
-    #marketing {
-      grid-area: marketing;
-  
-      section {
-        font-weight: bold;
-        margin-bottom: 25px;
-      }
-    }
-  
-    #programación {
-      grid-area: programación;
-  
-      section {
-        font-weight: bold;
-        margin-bottom: 25px;
-      }
-    }
-  
-    #sonido {
-      grid-area: sonido;
-  
-      section {
-        font-weight: bold;
-        margin-bottom: 25px;
-      }
-    }
-  
-    #videojuegos {
-      grid-area: videojuegos;
-  
-      section {
-        font-weight: bold;
-        margin-bottom: 25px;
-      }
-    }
-  
-    nav {
-      grid-area: nav;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .bg-custom {
-      background-color: #364959;
-    }
-  
-    @media (min-width: 600px) and (max-width: 1400px) {
-      /* Estilos para pantallas medianas */
-      display: grid;
-      grid-template-areas:
-        ". header header ."
-        "arteYDiseño arteYDiseño idiomas idiomas"
-        "marketing marketing programación programación"
-        "sonido sonido videojuegos videojuegos";
-      grid-template-rows: 1fr 2fr 2fr 2fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      row-gap: 20px;
-      column-gap: 20px;
-      height: 60vh;
-      margin: 50px;
-      margin-bottom: 200px;
-      font-size: 13px;
-    }
+}
 
-    @media (max-width: 599px) {
-        /* Estilos para pantallas pequeñas */
-        #grilla {
-          display: grid;
-          grid-template-areas:
-            "header"
-            "arteYDiseño"
-            "idiomas"
-            "marketing"
-            "programación"
-            "sonido"
-            "videojuegos";
-          grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
-          grid-template-columns: 1fr;
-          row-gap: 20px;
-          column-gap: 20px;
-          height: 60vh;
-          margin: 30px;
-          margin-bottom: 530px;
-          font-size: 11px;
-        }
-    }
-  }
-  
-  footer {
-    /* Estilos del pie de página */
-    background-color: grey;
-    color: white;
+/* Estilo del navbar */
+#navBar {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "nav";
+  align-items: center;
+  background-color: #d2d5d9;
+  border: 2px solid black;
+  padding: 10px;
+
+  h1 {
+    margin: 0;
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
-  }
-  
-  #contenedorImagen {
-    position: relative;
-    margin-bottom: 40px;
-  }
-  
-  #imagenHome {
-    width: 100%;
-    height: 500px;
-  }
-  
-  #buscador {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    padding: 10px;
-    font-size: 20px;
-    border: none;
-    border-radius: 20px;
-  }
-  
-  #cuerpo {
-    display: grid;
-    grid-template-areas:
-      /* Áreas de la cuadrícula */
-      ". irAlExplorador ."
-      "textoPrincipal textoPrincipal textoPrincipal"
-      "subcategoriaDestacada categoriaDestacada plataformaDestacada"
-      "textoFinal textoFinal textoFinal";
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
-    grid-template-columns: 3fr 3fr 3fr;
-    row-gap: 20px;
-    column-gap: 20px;
-    height: 60vh;
-    margin: 80px;
-    margin-bottom: 200px;
-  
-    .celdaIndex {
-      background-color: #D2D5D9;
-      color: white;
-      color: black;
-      text-align: center;
+    grid-area: title;
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
     }
-  
-    #irAlExplorador {
-      grid-area: irAlExplorador;
-  
-      header {
-        font-weight: bold;
-        font-size: 25px;
-        color: black;
+  }
+
+  nav {
+    grid-area: nav;
+
+    ul {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+
+      li {
+        position: relative;
+
+        &:hover {
+          border: 2px outset #aac7cef5;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: inherit;
+          display: block;
+          padding: 10px;
+          background-color: #364959;
+
+          &.linkNavItem2 {
+            color: #909295;
+          }
+        }
+
+        .listaOculta {
+          display: none;
+          position: absolute;
+          background-color: #364959;
+          margin: 0;
+          padding: 10px;
+          top: 100%;
+          left: 0;
+          width: 100%;
+
+          li {
+            a {
+              color: inherit;
+              text-decoration: inherit;
+              background-color: #d2d5d9;
+            }
+          }
+        }
+
+        &:hover > .listaOculta {
+          display: block;
+        }
       }
     }
-  
-    #textoPrincipal {
-      grid-area: textoPrincipal;
-    }
-  
-    #subcategoriaDestacada {
-      grid-area: subcategoriaDestacada;
-    }
-  
-    #categoriaDestacada {
-      grid-area: categoriaDestacada;
-    }
-  
-    #plataformaDestacada {
-      grid-area: plataformaDestacada;
-    }
-  
-    #textoFinal {
-      grid-area: textoFinal;
-    }
   }
-  
+
   @media (max-width: 650px) {
-    /* Estilos para pantallas pequeñas */
-    #cuerpo {
-      display: grid;
-      grid-template-areas:
-        "irAlExplorador"
-        "textoPrincipal"
-        "subcategoriaDestacada"
-        "categoriaDestacada"
-        "plataformaDestacada"
-        "textoFinal";
-      grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
-      grid-template-columns: 1fr;
-      row-gap: 20px;
-      column-gap: 20px;
-      height: 60vh;
-      margin: 30px;
-      margin-bottom: 530px;
-      font-size: 11px;
+    grid-template-areas:
+      "title"
+      "nav";
+
+    nav {
+      ul {
+        grid-template-columns: 1fr;
+      }
     }
   }
-  
-  .imagenDeDestacados {
-    width: 150px;
-    margin-top: auto;
-    margin-bottom: auto;
+}
+
+/* Estilo del pie de página */
+footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+
+  div
+  {
+    background-color: rgba(0, 0, 0, 0.2);
   }
+}
+  
+
+
+

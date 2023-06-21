@@ -1,0 +1,125 @@
+/* Estilo de la imagen principal y el buscador */
+#contenedorImagen 
+{
+    position: relative;
+    margin-bottom: 40px;
+
+    #imagenHome 
+    {
+        width: 100%;
+        height: 500px;
+    }
+
+    #buscador 
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+        border-radius: 20px;
+    }  
+}
+
+/* Estilo del cuerpo */
+#cuerpo 
+{
+    display: grid;
+    grid-template-areas:
+    /* Áreas de la cuadrícula */
+    ". irAlExplorador ."
+    "textoPrincipal textoPrincipal textoPrincipal"
+    "subcategoriaDestacada categoriaDestacada plataformaDestacada"
+    "textoFinal textoFinal textoFinal";
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 3fr 3fr 3fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    height: 60vh;
+    margin: 80px;
+    margin-bottom: 200px;
+  
+    .celdaIndex 
+    {
+        background-color: #D2D5D9;
+        color: white;
+        color: black;
+        text-align: center;
+    }
+  
+    #irAlExplorador 
+    {
+        grid-area: irAlExplorador;
+        color: red($color: #000000);
+  
+        header 
+        {
+            font-weight: bold;
+            font-size: 25px;
+            color: black;
+        }
+    }
+
+    #textoPrincipal 
+    {
+        grid-area: textoPrincipal;
+        font-size: 5xp;
+    }
+  
+    #subcategoriaDestacada 
+    {
+        grid-area: subcategoriaDestacada;
+    }
+  
+    #categoriaDestacada 
+    {
+        grid-area: categoriaDestacada;
+    }
+  
+    #plataformaDestacada 
+    {
+        grid-area: plataformaDestacada;
+    }
+  
+    #textoFinal 
+    {
+        grid-area: textoFinal;
+    }
+
+    .imagenDeDestacados 
+    {
+        width: 150px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+/* Estilo del cuerpo para pantallas pequeñas */
+@media (max-width: 650px) 
+{
+    #cuerpo 
+    {
+        display: grid;
+        grid-template-areas:
+        "irAlExplorador"
+        "textoPrincipal"
+        "subcategoriaDestacada"
+        "categoriaDestacada"
+        "plataformaDestacada"
+        "textoFinal";
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        column-gap: 20px;
+        height: 60vh;
+        margin: 30px;
+        margin-bottom: 530px;
+        font-size: 11px;
+    }
+}
+  
+  
+  

@@ -1,19 +1,4 @@
 @charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* Estilos de enlaces al pasar el cursor */
-a:hover {
-  text-decoration: underline;
-}
-
-#custom-body {
-  font-family: "Kanit", sans-serif;
-  background-color: #735134;
-}
-
 #grilla {
   display: grid;
   grid-template-areas: ". header ." "arteYDiseño idiomas marketing" "arteYDiseño idiomas marketing" "programación sonido videojuegos" "programación sonido videojuegos"; /* Fila 4 */
@@ -120,26 +105,16 @@ a:hover {
   }
 }
 
-footer {
-  /* Estilos del pie de página */
-  background-color: grey;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 12px;
-}
-
+/* Estilo de la imagen principal y el buscador */
 #contenedorImagen {
   position: relative;
   margin-bottom: 40px;
 }
-
-#imagenHome {
+#contenedorImagen #imagenHome {
   width: 100%;
   height: 500px;
 }
-
-#buscador {
+#contenedorImagen #buscador {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -151,6 +126,7 @@ footer {
   border-radius: 20px;
 }
 
+/* Estilo del cuerpo */
 #cuerpo {
   display: grid;
   grid-template-areas: ". irAlExplorador ." "textoPrincipal textoPrincipal textoPrincipal" "subcategoriaDestacada categoriaDestacada plataformaDestacada" "textoFinal textoFinal textoFinal";
@@ -171,6 +147,7 @@ footer {
 }
 #cuerpo #irAlExplorador {
   grid-area: irAlExplorador;
+  color: 0;
 }
 #cuerpo #irAlExplorador header {
   font-weight: bold;
@@ -179,6 +156,7 @@ footer {
 }
 #cuerpo #textoPrincipal {
   grid-area: textoPrincipal;
+  font-size: 5xp;
 }
 #cuerpo #subcategoriaDestacada {
   grid-area: subcategoriaDestacada;
@@ -192,9 +170,14 @@ footer {
 #cuerpo #textoFinal {
   grid-area: textoFinal;
 }
+#cuerpo .imagenDeDestacados {
+  width: 150px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
+/* Estilo del cuerpo para pantallas pequeñas */
 @media (max-width: 650px) {
-  /* Estilos para pantallas pequeñas */
   #cuerpo {
     display: grid;
     grid-template-areas: "irAlExplorador" "textoPrincipal" "subcategoriaDestacada" "categoriaDestacada" "plataformaDestacada" "textoFinal";
@@ -209,8 +192,108 @@ footer {
     font-size: 11px;
   }
 }
-.imagenDeDestacados {
-  width: 150px;
-  margin-top: auto;
-  margin-bottom: auto;
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+/* Estilo del body */
+#custom-body {
+  font-family: "Kanit", sans-serif;
+  background-color: #735134;
+}
+
+/* Estilo de los enlaces */
+a {
+  color: black;
+  text-decoration: none;
+  /* Estilos de enlaces al pasar el cursor */
+}
+a a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo del navbar */
+#navBar {
+  display: grid;
+  grid-template-areas: "title" "nav";
+  align-items: center;
+  background-color: #d2d5d9;
+  border: 2px solid black;
+  padding: 10px;
+}
+#navBar h1 {
+  margin: 0;
+  text-align: center;
+  grid-area: title;
+}
+#navBar h1 a {
+  color: inherit;
+  text-decoration: inherit;
+}
+#navBar nav {
+  grid-area: nav;
+}
+#navBar nav ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+#navBar nav ul li {
+  position: relative;
+}
+#navBar nav ul li:hover {
+  border: 2px outset rgba(170, 199, 206, 0.9607843137);
+}
+#navBar nav ul li a {
+  color: inherit;
+  text-decoration: inherit;
+  display: block;
+  padding: 10px;
+  background-color: #364959;
+}
+#navBar nav ul li a.linkNavItem2 {
+  color: #909295;
+}
+#navBar nav ul li .listaOculta {
+  display: none;
+  position: absolute;
+  background-color: #364959;
+  margin: 0;
+  padding: 10px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+#navBar nav ul li .listaOculta li a {
+  color: inherit;
+  text-decoration: inherit;
+  background-color: #d2d5d9;
+}
+#navBar nav ul li:hover > .listaOculta {
+  display: block;
+}
+@media (max-width: 650px) {
+  #navBar {
+    grid-template-areas: "title" "nav";
+  }
+  #navBar nav ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilo del pie de página */
+footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+footer div {
+  background-color: rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=main.css.map */

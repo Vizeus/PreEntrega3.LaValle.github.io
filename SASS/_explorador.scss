@@ -1,0 +1,133 @@
+#grilla {
+    display: grid;
+    grid-template-areas:
+      /* Áreas de la cuadrícula */
+      ". header ." /* Fila vacía para margen superior */
+      "arteYDiseño idiomas marketing" /* Fila 1 */
+      "arteYDiseño idiomas marketing" /* Fila 2 */
+      "programación sonido videojuegos" /* Fila 3 */
+      "programación sonido videojuegos"; /* Fila 4 */
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-columns: 3fr 3fr 3fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    height: 60vh;
+    margin: 80px;
+    margin-bottom: 200px;
+  
+    .celda {
+      background-color: #364959;
+      color: white;
+      text-align: center;
+    }
+  
+    #titulo {
+      grid-area: header;
+    }
+  
+    #arteYDiseño {
+      grid-area: arteYDiseño;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #idiomas {
+      grid-area: idiomas;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #marketing {
+      grid-area: marketing;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #programación {
+      grid-area: programación;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #sonido {
+      grid-area: sonido;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    #videojuegos {
+      grid-area: videojuegos;
+  
+      section {
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
+    }
+  
+    nav {
+      grid-area: nav;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .bg-custom {
+      background-color: #364959;
+    }
+  
+    @media (min-width: 600px) and (max-width: 1400px) {
+      /* Estilos para pantallas medianas */
+      display: grid;
+      grid-template-areas:
+        ". header header ."
+        "arteYDiseño arteYDiseño idiomas idiomas"
+        "marketing marketing programación programación"
+        "sonido sonido videojuegos videojuegos";
+      grid-template-rows: 1fr 2fr 2fr 2fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+      height: 60vh;
+      margin: 50px;
+      margin-bottom: 200px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 599px) {
+        /* Estilos para pantallas pequeñas */
+        #grilla {
+          display: grid;
+          grid-template-areas:
+            "header"
+            "arteYDiseño"
+            "idiomas"
+            "marketing"
+            "programación"
+            "sonido"
+            "videojuegos";
+          grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+          grid-template-columns: 1fr;
+          row-gap: 20px;
+          column-gap: 20px;
+          height: 60vh;
+          margin: 30px;
+          margin-bottom: 530px;
+          font-size: 11px;
+        }
+    }
+  }
