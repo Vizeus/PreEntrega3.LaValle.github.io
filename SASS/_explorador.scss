@@ -1,3 +1,4 @@
+/* Cuerpo del explorador */
 #grilla {
     display: grid;
     grid-template-areas:
@@ -12,11 +13,13 @@
     row-gap: 20px;
     column-gap: 20px;
     height: 60vh;
-    margin: 80px;
+    margin-top: 10em;
+    margin-right: 80px;
+    margin-left: 80px;
     margin-bottom: 200px;
   
     .celda {
-      background-color: #364959;
+      background-color: $navbar-button-color;
       color: white;
       text-align: center;
     }
@@ -87,7 +90,7 @@
     }
   
     .bg-custom {
-      background-color: #364959;
+      background-color: $primary-color;
     }
   
     @media (min-width: 600px) and (max-width: 1400px) {
@@ -107,27 +110,27 @@
       margin-bottom: 200px;
       font-size: 13px;
     }
-
-    @media (max-width: 599px) {
-        /* Estilos para pantallas pequeñas */
-        #grilla {
-          display: grid;
-          grid-template-areas:
-            "header"
-            "arteYDiseño"
-            "idiomas"
-            "marketing"
-            "programación"
-            "sonido"
-            "videojuegos";
-          grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
-          grid-template-columns: 1fr;
-          row-gap: 20px;
-          column-gap: 20px;
-          height: 60vh;
-          margin: 30px;
-          margin-bottom: 530px;
-          font-size: 11px;
-        }
+  }
+  
+  @media (max-width: 599px) {
+    /* Estilos para pantallas pequeñas */
+    #grilla {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "arteYDiseño"
+        "idiomas"
+        "marketing"
+        "programación"
+        "sonido"
+        "videojuegos";
+      grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+      height: 60vh;
+      margin: 30px;
+      margin-bottom: 530px;
+      font-size: 11px;
     }
   }

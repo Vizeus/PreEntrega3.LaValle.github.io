@@ -1,4 +1,54 @@
 @charset "UTF-8";
+.container {
+  margin-top: 5rem;
+  margin-bottom: 11rem;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 12em;
+  margin-bottom: 300px;
+}
+.container .login-form {
+  background-color: #e6e6e6;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  width: 400px;
+}
+.container .login-form h2 {
+  margin-bottom: 1rem;
+}
+.container .login-form form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.container .login-form form .form-group input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+.container .login-form form .checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.container .login-form form .checkbox-group input[type=checkbox] {
+  margin-right: 0.3rem;
+}
+.container .login-form form .checkbox-group label {
+  margin-bottom: 0;
+}
+.container .login-form form .boton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  border: none;
+}
+
+/* Cuerpo del explorador */
 #grilla {
   display: grid;
   grid-template-areas: ". header ." "arteYDiseño idiomas marketing" "arteYDiseño idiomas marketing" "programación sonido videojuegos" "programación sonido videojuegos"; /* Fila 4 */
@@ -8,7 +58,9 @@
   -moz-column-gap: 20px;
        column-gap: 20px;
   height: 60vh;
-  margin: 80px;
+  margin-top: 10em;
+  margin-right: 80px;
+  margin-left: 80px;
   margin-bottom: 200px;
 }
 #grilla .celda {
@@ -68,7 +120,7 @@
   align-items: center;
 }
 #grilla .bg-custom {
-  background-color: #364959;
+  background-color: #735134;
 }
 @media (min-width: 600px) and (max-width: 1400px) {
   #grilla {
@@ -86,11 +138,10 @@
     font-size: 13px;
   }
 }
+
 @media (max-width: 599px) {
+  /* Estilos para pantallas pequeñas */
   #grilla {
-    /* Estilos para pantallas pequeñas */
-  }
-  #grilla #grilla {
     display: grid;
     grid-template-areas: "header" "arteYDiseño" "idiomas" "marketing" "programación" "sonido" "videojuegos";
     grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
@@ -104,11 +155,11 @@
     font-size: 11px;
   }
 }
-
+/* Estilo compartido */
 /* Estilo de la imagen principal y el buscador */
 #contenedorImagen {
   position: relative;
-  margin-bottom: 40px;
+  margin-top: 7.37em;
 }
 #contenedorImagen #imagenHome {
   width: 100%;
@@ -136,11 +187,12 @@
   -moz-column-gap: 20px;
        column-gap: 20px;
   height: 60vh;
-  margin: 80px;
-  margin-bottom: 200px;
+  margin-top: 30px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 #cuerpo .celdaIndex {
-  background-color: #D2D5D9;
+  background-color: #d2d5d9;
   color: white;
   color: black;
   text-align: center;
@@ -156,7 +208,7 @@
 }
 #cuerpo #textoPrincipal {
   grid-area: textoPrincipal;
-  font-size: 5xp;
+  font-size: 13px;
 }
 #cuerpo #subcategoriaDestacada {
   grid-area: subcategoriaDestacada;
@@ -169,6 +221,9 @@
 }
 #cuerpo #textoFinal {
   grid-area: textoFinal;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: italic;
 }
 #cuerpo .imagenDeDestacados {
   width: 150px;
@@ -198,30 +253,30 @@
   color: black;
 }
 
-/* Estilo del body */
 #custom-body {
   font-family: "Kanit", sans-serif;
-  background-color: #735134;
+  background-image: linear-gradient(#735134, #d2d5d9);
 }
 
-/* Estilo de los enlaces */
 a {
   color: black;
   text-decoration: none;
-  /* Estilos de enlaces al pasar el cursor */
 }
-a a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-/* Estilo del navbar */
 #navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: grid;
   grid-template-areas: "title" "nav";
   align-items: center;
   background-color: #d2d5d9;
   border: 2px solid black;
   padding: 10px;
+  z-index: 100;
 }
 #navBar h1 {
   margin: 0;
@@ -245,8 +300,12 @@ a a:hover {
 }
 #navBar nav ul li {
   position: relative;
+  transform: translate(0px, 0px);
+  transition: all 0.3s;
+  color: white;
 }
 #navBar nav ul li:hover {
+  transform: translate(0px, 2px);
   border: 2px outset rgba(170, 199, 206, 0.9607843137);
 }
 #navBar nav ul li a {
@@ -273,20 +332,12 @@ a a:hover {
   color: inherit;
   text-decoration: inherit;
   background-color: #d2d5d9;
+  color: black;
 }
 #navBar nav ul li:hover > .listaOculta {
   display: block;
 }
-@media (max-width: 650px) {
-  #navBar {
-    grid-template-areas: "title" "nav";
-  }
-  #navBar nav ul {
-    grid-template-columns: 1fr;
-  }
-}
 
-/* Estilo del pie de página */
 footer {
   background-color: grey;
   color: white;
@@ -296,4 +347,53 @@ footer {
 }
 footer div {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Uso de @each y maps */
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 16px;
+}
+
+.large {
+  font-size: 20px;
+}
+
+.primary-color {
+  color: #735134;
+}
+
+.secondary-color {
+  color: #d2d5d9;
+}
+
+.link-color {
+  color: black;
+}
+
+.link-hover-color {
+  color: #909295;
+}
+
+.navbar-background-color {
+  color: #d2d5d9;
+}
+
+.navbar-border-color {
+  color: black;
+}
+
+.navbar-button-color {
+  color: #364959;
+}
+
+.footer-background-color {
+  color: grey;
+}
+
+.footer-text-color {
+  color: white;
 }/*# sourceMappingURL=main.css.map */

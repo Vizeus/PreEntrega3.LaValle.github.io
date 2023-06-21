@@ -1,125 +1,120 @@
-/* Estilo de la imagen principal y el buscador */
-#contenedorImagen 
-{
+/* Estilo compartido */
+@mixin text-center {
+    text-align: center;
+  }
+  
+  /* Estilo de la imagen principal y el buscador */
+  #contenedorImagen {
     position: relative;
-    margin-bottom: 40px;
-
-    #imagenHome 
-    {
-        width: 100%;
-        height: 500px;
+    margin-top: 7.37em;
+  
+    #imagenHome {
+      width: 100%;
+      height: 500px;
     }
-
-    #buscador 
-    {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        padding: 10px;
-        font-size: 20px;
-        border: none;
-        border-radius: 20px;
-    }  
-}
-
-/* Estilo del cuerpo */
-#cuerpo 
-{
+  
+    #buscador {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      padding: 10px;
+      font-size: 20px;
+      border: none;
+      border-radius: 20px;
+    }
+  }
+  
+  /* Estilo del cuerpo */
+  #cuerpo {
     display: grid;
     grid-template-areas:
-    /* Áreas de la cuadrícula */
-    ". irAlExplorador ."
-    "textoPrincipal textoPrincipal textoPrincipal"
-    "subcategoriaDestacada categoriaDestacada plataformaDestacada"
-    "textoFinal textoFinal textoFinal";
+      /* Áreas de la cuadrícula */
+      ". irAlExplorador ."
+      "textoPrincipal textoPrincipal textoPrincipal"
+      "subcategoriaDestacada categoriaDestacada plataformaDestacada"
+      "textoFinal textoFinal textoFinal";
     grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
     grid-template-columns: 3fr 3fr 3fr;
     row-gap: 20px;
     column-gap: 20px;
     height: 60vh;
-    margin: 80px;
-    margin-bottom: 200px;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
   
-    .celdaIndex 
-    {
-        background-color: #D2D5D9;
-        color: white;
+    .celdaIndex {
+      background-color: $secondary-color;
+      color: white;
+      color: black;
+      @include text-center;
+    }
+  
+    #irAlExplorador {
+      grid-area: irAlExplorador;
+      color: red($color: $link-color);
+  
+      header {
+        font-weight: bold;
+        font-size: 25px;
         color: black;
-        text-align: center;
+      }
     }
   
-    #irAlExplorador 
-    {
-        grid-area: irAlExplorador;
-        color: red($color: #000000);
-  
-        header 
-        {
-            font-weight: bold;
-            font-size: 25px;
-            color: black;
-        }
-    }
-
-    #textoPrincipal 
-    {
-        grid-area: textoPrincipal;
-        font-size: 5xp;
+    #textoPrincipal {
+      grid-area: textoPrincipal;
+      font-size: 13px;
     }
   
-    #subcategoriaDestacada 
-    {
-        grid-area: subcategoriaDestacada;
+    #subcategoriaDestacada {
+      grid-area: subcategoriaDestacada;
     }
   
-    #categoriaDestacada 
-    {
-        grid-area: categoriaDestacada;
+    #categoriaDestacada {
+      grid-area: categoriaDestacada;
     }
   
-    #plataformaDestacada 
-    {
-        grid-area: plataformaDestacada;
+    #plataformaDestacada {
+      grid-area: plataformaDestacada;
     }
   
-    #textoFinal 
-    {
-        grid-area: textoFinal;
+    #textoFinal {
+      grid-area: textoFinal;
+      font-size: 13px;
+      font-weight: normal;
+      font-style: italic;
     }
-
-    .imagenDeDestacados 
-    {
-        width: 150px;
-        margin-top: auto;
-        margin-bottom: auto;
+  
+    .imagenDeDestacados {
+      width: 150px;
+      margin-top: auto;
+      margin-bottom: auto;
     }
-}
-
-/* Estilo del cuerpo para pantallas pequeñas */
-@media (max-width: 650px) 
-{
-    #cuerpo 
-    {
-        display: grid;
-        grid-template-areas:
+  }
+  
+  /* Estilo del cuerpo para pantallas pequeñas */
+  @media (max-width: 650px) {
+    #cuerpo {
+      display: grid;
+      grid-template-areas:
         "irAlExplorador"
         "textoPrincipal"
         "subcategoriaDestacada"
         "categoriaDestacada"
         "plataformaDestacada"
         "textoFinal";
-        grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-        column-gap: 20px;
-        height: 60vh;
-        margin: 30px;
-        margin-bottom: 530px;
-        font-size: 11px;
+      grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      column-gap: 20px;
+      height: 60vh;
+      margin: 30px;
+      margin-bottom: 530px;
+      font-size: 11px;
     }
-}
+  }
+  
   
   
   

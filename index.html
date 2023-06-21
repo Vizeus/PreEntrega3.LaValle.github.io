@@ -12,6 +12,9 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="./SASS/main.css">
 
+    <!-- Animate CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <title>Cursos Online</title>
     
     <!-- Google Fonts link -->
@@ -20,7 +23,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     
     <!-- Icono -->
-    <link rel="shortcut icon" href="./Imagenes del Proyecto/Icono libro.webp" type="image">
+    <link rel="shortcut icon" href="./Imgs comprimidas/Icono libro.webp" type="image">
+
+    <!-- SEO -->
+
+    <!-- Descripcion del buscador -->
+    <meta name="description" content="Cursos Online es una plataforma de busqueda de cursos online en español que te permite aprender de forma remota y personalizada">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="Cursos Online, Cursos, Online, Educacion, Programacion, Diseño, Marketing, Estudio, Autodidacta, Español, Aprendizaje, Aprender">
 
 </head>
     
@@ -28,44 +39,70 @@
 
     <!-- Navbar -->
     <header id="navBar">
+
         <h1>
           <a href="./index.html" id="titulo">Cursos Online</a>
         </h1>
+
         <nav>
+
           <ul>
+
             <li class="navBarItem">
+
               <a class="linkNavItem" href="./index.html">Home</a>
+
             </li>
+
             <li class="navBarItem">
-              <a class="linkNavItem" href="./filtro.html">Cursos</a>
+
+              <a class="linkNavItem" href="./Paginas/explorador.html">Cursos</a>
+
               <ul class="listaOculta">
+
                 <li>
-                  <a class="linkNavItem" href="./filtro.html">Filtro de cursos</a>
+                  <a class="linkNavItem" href="./Paginas/explorador.html">Filtro de cursos</a>
                 </li>
+
                 <li>
-                  <a class="linkNavItem" href="./cursosDeIniciacion.html">Cursos de Iniciación</a>
+                  <a class="linkNavItem" href="./Paginas/explorador.html">Cursos de Iniciación</a>
                 </li>
+
                 <li>
-                  <a class="linkNavItem" href="./explorador.html">Categorías</a>
+
+                  <a class="linkNavItem" href="./Paginas/explorador.html">Categorías</a>
+
                   <ul class="listaOculta">
-                    <li><a class="linkNavItem2" href="#">Arte y Diseño</a></li>
-                    <li><a class="linkNavItem2" href="#">Idiomas</a></li>
-                    <li><a class="linkNavItem2" href="#">Marketing</a></li>
-                    <li><a class="linkNavItem2" href="#">Programación</a></li>
-                    <li><a class="linkNavItem2" href="#">Sonido</a></li>
-                    <li><a class="linkNavItem2" href="#">Videojuegos</a></li>
+
+                    <li><a class="linkNavItem2" href="./Paginas/explorador.html">Arte y Diseño</a></li>
+                    <li><a class="linkNavItem2" href="./Paginas/explorador.html">Idiomas</a></li>
+                    <li><a class="linkNavItem2" href="./Paginas/explorador.html">Marketing</a></li>
+                    <li><a class="linkNavItem2" href="./Paginas/explorador.html">Programación</a></li>
+                    <li><a class="linkNavItem2" href="./Paginas/explorador.html">Sonido</a></li>
+                    <li><a class="linkNavItem2" href="./Paginas/explorador.html">Videojuegos</a></li>
+
                   </ul>
+
                 </li>
+
               </ul>
+
             </li>
+
             <li class="navBarItem">
-              <a class="linkNavItem" href="./perfil.html">Perfil</a>
+
+              <a class="linkNavItem" href="./Paginas/LogIn.html">Perfil</a>
+
               <ul class="listaOculta">
-                <li><a class="linkNavItem" href="">Mis favoritos</a></li>
+                <li><a class="linkNavItem" href="./Paginas/LogIn.html">Mis favoritos</a></li>
               </ul>
+
             </li>
+
           </ul>
+
         </nav>
+
     </header>
 
     <!-- Imagen y Buscador -->
@@ -82,38 +119,38 @@
 
         <div id="irAlExplorador" class="celdaIndex animate__animated animate__bounce animate__infinite	infinite"><header><a href="./explorador.html">Explorar todos los Cursos</a></header></div>
 
-        <div id="textoPrincipal" class="celdaIndex">
+        <section id="textoPrincipal" class="celdaIndex">
 
-            <h1>Ofrecemos una plataforma fácil de usar para encontrar cursos en línea en español sobre programación, marketing, diseño y más. Nuestra selección está cuidadosamente filtrada para ahorrar tiempo y ayudarte en tu aprendizaje autodidacta. ¡Empieza tu viaje de aprendizaje hoy mismo!</h1>
+            <h2>Ofrecemos una plataforma fácil de usar para encontrar cursos en línea en español sobre programación, marketing, diseño y más. Nuestra selección está cuidadosamente filtrada para ahorrar tiempo y ayudarte en tu aprendizaje autodidacta. ¡Empieza tu viaje de aprendizaje hoy mismo!</h1>
 
-        </div>
+        </section>
         
         <div id="subcategoriaDestacada" class="animate__animated animate__flipInY animate__delay-1s celdaIndex">
 
             <section>Subcategoría Destacada</section>
-            <img src="./Imagenes del Proyecto/C++.png" alt="C++ logo" class="imagenDeDestacados">
+            <img src="./Imgs comprimidas/C++.png" alt="C++ logo" class="imagenDeDestacados">
 
         </div>
 
         <div id="categoriaDestacada" class="animate__animated animate__flipInY animate__delay-2s celdaIndex">
 
             <section>Categoria Destacada</section>
-            <img src="./Imagenes del Proyecto/Arte y Diseño.png" alt="C++ logo" class="imagenDeDestacados">
+            <img src="./Imgs comprimidas/Arte y Diseño.png" alt="Arte y Diseño logo" class="imagenDeDestacados">
 
         </div>
 
         <div id="plataformaDestacada" class="animate__animated animate__flipInY animate__delay-3s celdaIndex"> 
             
             <section>Plataforma Destacada</section>
-            <img src="./Imagenes del Proyecto/Youtube logo.png" alt="C++ logo" class="imagenDeDestacados">
+            <img src="./Imgs comprimidas/Youtube logo.png" alt="YouTube logo" class="imagenDeDestacados">
 
         </div>
 
-        <div id="textoFinal" class="celdaIndex">
+        <section id="textoFinal" class="celdaIndex">
 
-            <h2>La educación está cambiando hacia un enfoque más personalizado y autodidacta gracias a la tecnología y la innovación. En nuestro sitio web de cursos en línea, nos esforzamos por ayudarte a encontrar una experiencia de aprendizaje adaptada a tus necesidades para ayudarte en tu carrera y mantenerte actualizado en un mundo globalizado y tecnológico.</h2>
+            <h3>La educación está cambiando hacia un enfoque más personalizado y autodidacta gracias a la tecnología y la innovación. En nuestro sitio web de cursos en línea, nos esforzamos por ayudarte a encontrar una experiencia de aprendizaje adaptada a tus necesidades para ayudarte en tu carrera y mantenerte actualizado en un mundo globalizado y tecnológico.</h2>
 
-        </div>
+        </section>
 
     </div>
 
